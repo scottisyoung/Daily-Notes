@@ -1,49 +1,49 @@
-<h1 style="color: #00bfff;">Markdown Notes</h1>
+# <span style="color: #00bfff;">Markdown Notes</span>
 
-<h4 style="color: red;">Overview</h4>
+### <span style="color: red;">Overview</span>
 
-*  Markdown Language is great for writing blog posts, creating web pages, git hub replies, books, slack messages or just taking notes
-*  You can use Markdown to write html or formatted text. Although Markdown does not replace html. Markdown is a _writing format_, while     HTML is a _publishing format_
+*  Markdown Language is great for writing blog posts, creating web pages, git hub replies, books, slack messages      or just taking notes
+*  You can use Markdown to write html or formatted text. Although Markdown does not replace html. Markdown is a       <span style="color: #76D7C4;">_writing format_</span>, while HTML is a <span style="color: #76D7C4">               _publishing format_</span>
 *  Can read by itself or can convert to html to be put onto the web
-*  There are different types of Markdown like GFM (Github Flavored Markdown) and many different apps/editors that can be used 
+*  There are different types of Markdown like GFM (Github Flavored Markdown) and many different apps/editors that     can be used 
 
-<h2 style="color: blue;"> Section Headings, Paragraphs, Blockquotes, Lists, Code Blocks and Horizontal Lines </h2>
+## <span style="color: blue;"> Section Headings, Paragraphs, Blockquotes, Lists, Code Blocks and Horizontal Lines </span>
 
-<h4 style="color: red;">Headings</h4>
+### <span style="color: red;">Headings</span>
 
-*   "#" is used for main headings (H1)
-*   "##" is used for sub headings (H2)
-*   "######" is used for (H6)
-*   "=====" is also used for main headings (H1)
-*   "-----" is also used for sub headings (H2)
+*   <span style="color: #FA8072;">#</span> is used for main headings (H1)
+*   <span style="color: #FA8072;">##</span> is used for sub headings (H2)
+*   <span style="color: #FA8072;">######</span> is used for (H6)
+*   <span style="color: #FA8072;">=====</span> is also used for main headings (H1)
+*   <span style="color: #FA8072;">-----</span> is also used for sub headings (H2)
 *   You can also close the hashmarks if you want but it is purely cosmetic. "# Title #".
 
-<h4 style="color: red;">Paragraphs</h4>
+### <span style="color: red;">Paragraphs</span>
 
-*   "A blank line" is what will create a paragraph
+*   <span style="color: #FA8072;">_A blank line_</span> is what will create a paragraph
 
-<h4 style="color: red;">Blockquotes</h4>
+### <span style="color: red;">Blockquotes</span>
 
-*   ">" goes before the line of the text.  They can also be nested inside one another. "> >"
+*   <span style="color: #FA8072;"> > </span> goes before the line of the text.  They can also be nested inside one     another. "> >"
 
-<h4 style="color: red;">Lists</h4>
+### <span style="color: red;">Lists</span>
 
 *   You can use unordered or numbered lists
-*   "*, -, +" creates a bullet point or an unordered list
-*   List can be nested. If you use "*" with another inside it 
+*   <span style="color: #FA8072;">*, -, +</span> creates a bullet point or an unordered list
+*   List can be nested. If you use <span style="color: #FA8072;">*</span> with another inside it 
     will create an open circle bullet.
-*   "1, 2, 3" creates a numbered list as long as followed by period.  It does not matter what number you use, it will always follow          sequence. 1,2,7,5,8 will return 1,2,3,4,5 in an ordered list
+*   <span style="color: #FA8072;">1, 2, 3</span> creates a numbered list as long as followed by period.  It does       not matter what number you use, it will always follow sequence. 1,2,7,5,8 will return 1,2,3,4,5 in an ordered      list
 *   In order to escape a list such as 1979. At the beginning 
     of a sentence would create a list but 1979 \ . will not
 
 *   To put a code block within a list item, the code block
-    needs to be indedted _twice_ (two tabs or 8 spaces)
+    needs to be indedted <span style="color: #FA8072;">_twice_</span> (two tabs or 8 spaces)
 
     * For example if this was my list item
 
             <code goes here>
 
-<h4 style="color: red;">Code Blocks</h4>
+### <span style="color: red;">Code Blocks</span>
 
 *   Pre-formatted code blocks are used for writing about programming or markup source code. 
 *   To produce a code block in markdown, simply indent every line of the block by at least 4 spaces or a tab.
@@ -51,21 +51,21 @@
 
     <pre><code> This is a code block </pre></code>
 
-*   Within a code block, & and < areautomatically converted into HTML entities.
+*   Within a code block, <span style="color: #FA8072;">& and < </span> areautomatically converted into HTML            entities.
 
-<h4 style="color: red;">Horizontal Lines</h4>
+### <span style="color: red;">Horizontal Lines</span>
 
 *   A horizontal line can be created by using three or more of 
-    an hypen, asterisks or underscores on a separate line by themselves. "***"
+    an hypen, asterisks or underscores on a separate line by themselves. <span style="color: #FA8072;">***</span>
 
-<h2 style="color: blue;">Span Elements</h2>
+## <span style="color: blue;">Span Elements</span>
 
-<h4 style="color: red;">Links</h4>
+### <span style="color: red;">Links</span>
 
 *   There are two types of links: Inline and Reference, both 
-    use [square brackets].
-    1.  _Inline Links:_ use a set of regular parentheses 
-                        imediately after the link text's closing square bracket
+    use <span style="color: #FA8072;">[square brackets]</span>.
+    1.  <span style="color: #76D7C4;">_Inline Links:_</span> use a set of regular parentheses 
+        imediately after the link text's closing square bracket
 
         Example: below is written like "[Google]"(http://www.google.com/ "Title") but without the quotes around the square brackets. You can write it with or without the title attribute. 
     
@@ -78,7 +78,7 @@
 
         See my [About](/about/) page for details.
 
-    2.  _Reference Links_: use a second set of square brakets, inside which you placec a label of your choosing to identify the link. 
+    2.  <span style="color: #76D7C4;">_Reference Links:_</span> use a second set of square brakets, inside which       you placec a label of your choosing to identify the link. 
 
         Example: This is [an example][id] reference-style link
 
@@ -92,18 +92,18 @@
 
 <h4 style="color: red;">Text Decorations</h4>
 
-*   "double underscore or double asterisk" will create **BOLD**.
-*   "single underscore or single asterisk" will create _italics_.
+*   "double underscore or double asterisk" will create <span style="color: #FA8072;">**BOLD**</span>.
+*   "single underscore or single asterisk" will create <span style="color: #FA8072;">_italics_</span>.
 *   You can escape an asterisk or underscore with a backlash. \*   \\ 
-*   "^2^" will create superscript. 
-*   "~~" will create strikethrough.  ~~Done~~
-*   "--" will create endash.
-*   "---" will create emdash.
-*   "..." will create ellipsis.
+*   <span style="color: #FA8072;">^2^</span> will create superscript. 
+*   <span style="color: #FA8072;">~~</span> will create strikethrough.  ~~Done~~
+*   <span style="color: #FA8072;">--</span> will create endash.
+*   <span style="color: #FA8072;">---</span> will create emdash.
+*   <span style="color: #FA8072;">...</span> will create ellipsis.
 
 <h4 style="color: red;">Code</h4>
 
-*   To indicate a span of code, wrap it with backtick quotes (`).  A code span indicates code within a normal paragraph
+*   To indicate a span of code, wrap it with backtick quotes (`).  A code span indicates code within a normal          paragraph
 
     Example:  Use the `printf()` function
 
@@ -111,11 +111,11 @@
 
 *   Two styles of images in markdown. Inline and Reference.
 
-    1.  _Inline_:   ![Alt Text](/path/tp/img.jpg Optional Title) with optional title wrapped in quotes
+    1.  <span style="color: #76D7C4;">_Inline:_</span>   ![Alt Text](/path/tp/img.jpg Optional Title) with optional title wrapped in quotes
 
         ![Dog](/path/to/img.jpg "Dog")
 
-    2.  _Reference_: ![Alt Text] "[id]" with no quotes and the id is wrapped in square brackets
+    2.  <span style="color: #76D7C4;">_Reference:_</span> ![Alt Text] "[id]" with no quotes and the id is wrapped in square brackets
 
         ![Dog][id]
 
@@ -126,7 +126,7 @@
 
 <h4 style="color: red;">Automatic Links</h4>
 
-*   Simply surround the URL or email address with angle brackets. <>
+*   Simply surround the URL or email address with angle brackets. <span style="color: #FA8072;"><></span>
 
     <http://www.google.com> or <joedirt@gmail.com>
 
@@ -134,22 +134,22 @@
 
 *   You can escape the following characters by using a backslash
 
-    *   Backslash           \\
-    *   Backtick            \`
-    *   Asterisk            \*
-    *   Underscore          \_
-    *   Curly Braces        \{ }
-    *   Square Brackets     \[ ]
-    *   Parentheses         \( )
-    *   Hash Mark           \#
-    *   Plus Sign           \+
-    *   Minus Sign          \-
-    *   Dot                 \.
-    *   Exclamation Mark    \!
+    *   Backslash           <span style="color: #FA8072;">\\</span>
+    *   Backtick            <span style="color: #FA8072;">\`</span>
+    *   Asterisk            <span style="color: #FA8072;">\*</span>
+    *   Underscore          <span style="color: #FA8072;">\_</span>
+    *   Curly Braces        <span style="color: #FA8072;">\{ }</span>
+    *   Square Brackets     <span style="color: #FA8072;">\[ ]</span>
+    *   Parentheses         <span style="color: #FA8072;">\( )</span>
+    *   Hash Mark           <span style="color: #FA8072;">\#</span>
+    *   Plus Sign           <span style="color: #FA8072;">\+</span>
+    *   Minus Sign          <span style="color: #FA8072;">\-</span>
+    *   Dot                 <span style="color: #FA8072;">\.</span>
+    *   Exclamation Mark    <span style="color: #FA8072;">\!</span>
 
 <h4 style="color: red;">Inline Equations</h4>
 
-*   $A = \pi*r^{2}$ will create an inline equation
+*   <span style="color: #FA8072;">$A = \pi*r^{2}$</span> will create an inline equation
 
 <h4 style="color: red;">Tables</h4>
 
@@ -159,6 +159,16 @@ Table Header | Second Header | Third Header
 -------------|---------------|-------------
 Table Cell   | Cell 2 | Cell 3
 Cell 4       | Cell 5 | Cell 6 
+
+
+
+
+
+
+
+
+
+
 
 
 
