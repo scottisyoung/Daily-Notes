@@ -32,7 +32,7 @@
 
 *    <span style="color: #FA8072;">cat (file):</span> This will output the contents of specific file
 
-*    <span style="color: #FA8072;">less (file):</span> This will output the contents of the file using the less command which supports pagination etc...
+*    <span style="color: #FA8072;">less (file):</span> This will output the contents of the file using the less          command which supports pagination etc...
 
 *    <span style="color: #FA8072;">head (file):</span> This will output the first 10 lines of the specific file.
 
@@ -46,23 +46,23 @@
 
 *    <span style="color: #FA8072;">rm -f (file):</span> Force deletes a file
 
-*    <span style="color: #FA8072;">mv (file)(directory): </span> Moves file to directory (can possible overwrite an existing file)
+*    <span style="color: #FA8072;">mv (file)(directory): </span> Moves file to directory (can possible overwrite an      existing file)
 
 *    <span style="color: #FA8072;">mv (file-old) (file-new):</span> Renames file from old to new
 
-*    <span style="color: #FA8072;">cp (file) (directory):</span> Copy files to a directory (possible overwriting a file)
+*    <span style="color: #FA8072;">cp (file) (directory):</span> Copy files to a directory (possible overwriting a       file)
 
-*    <span style="color: #FA8072;">cp -r (directory1) (directory2):</span> Copies directory 1 and its contents to directory 2 (possible overwriting files in existing directory)
+*    <span style="color: #FA8072;">cp -r (directory1) (directory2):</span> Copies directory 1 and its contents to        directory 2 (possible overwriting files in existing directory)
 
 *    <span style="color: #FA8072;">chmod 755 (file):</span> Change permissions of the file to 755
 
-*    <span style="color: #FA8072;">chmod -r 600 (directory):</span> Change permissions of directory and its contents to 600
+*    <span style="color: #FA8072;">chmod -r 600 (directory):</span> Change permissions of directory and its              contents to 600
 
-*    <span style="color: #FA8072;">chown (user):(group) (file):</span> Change ownership of file to user and group (add -R to include a director's contents)
+*    <span style="color: #FA8072;">chown (user):(group) (file):</span> Change ownership of file to user and group        (add -R to include a director's contents)
 
-*    <span style="color: #FA8072;">find (dir) -name (file):</span> FInds all files named (file) inside (dir) user wildcards * to search for parts of filenames, e.g. "file.*
+*    <span style="color: #FA8072;">find (dir) -name (file):</span> FInds all files named (file) inside (dir) user        wildcards * to search for parts of filenames, e.g. "file.*
 
-*    <span style="color: #FA8072;">grep "text" (file):</span> Outputs all occurrences of "text" indside the file (add -i of case-insensitivity)
+*    <span style="color: #FA8072;">grep "text" (file):</span> Outputs all occurrences of "text" indside the file         (add -i of case-insensitivity)
 
 *    <span style="color: #FA8072;">grep -rl "text" (dir):</span> Search for all files containing "text" inside dir
 
@@ -72,7 +72,7 @@
 
 *    <span style="color: #FA8072;">curl -0 (url/to/file):</span> Download (file) via HTTP[S] for FTP
 
-*    <span style="color: #FA8072;">ssh (username)@(host):</span> Establish an SSH connection to (host) with the user (username)
+*    <span style="color: #FA8072;">ssh (username)@(host):</span> Establish an SSH connection to (host) with the          user (username)
 
 *    <span style="color: #FA8072;">scp (file) (user)@(host):/remote/path:</span> Copy (file) to a remote host
 
@@ -82,15 +82,35 @@
 
 *    <span style="color: #FA8072;">kill (pid):</span> Quits process with ID (pid)
 
+*    <span style="color: #FA8072;">apropos:</span> find what manual page is appropriate for your request
+
+*    <span style="color: #FA8072;">cat:</span> print the whole file
+
+*    <span style="color: #FA8072;">echo:</span> print some arguments
+
+*    <span style="color: #FA8072;">env:</span> take a look at your environment
+
+*    <span style="color: #FA8072;">exit:</span> will exit the shell
+
+*    <span style="color: #FA8072;">export:</span> set a new enviornment variable
+
+*    <span style="color: #FA8072;">man:</span> read a manual page
+
+*    <span style="color: #FA8072;">popd:</span> Pop directory
+
+*    <span style="color: #FA8072;">pushd</span> Push Directory
+
+*    <span style="color: #FA8072;">xargs:</span> execute arguments
+
 ## <span style="color: red;">Tricks / Tips</span>
 
-*    <span style="color: #FA8072;">man (command) or (command) --help</span> will give detailed documentation about the command in question
+*    <span style="color: #FA8072;">man (command) or (command) --help</span> will give detailed documentation about       the command in question
 
  *  <span style="color: #FA8072;">( ; ):</span> To cobine a command place a semi colon between commands
 
- *  <span style="color: #FA8072;">( && ):</span> This will execute a command only if its predecessor produces a result.  The command after the && will only run if previous command is successful.
+ *  <span style="color: #FA8072;">( && ):</span> This will execute a command only if its predecessor produces a        result.  The command after the && will only run if previous command is successful.
 
- *   <span style="color: #FA8072;">( || ):</span> This will only run the second command if the first command fails.  example: cd ~/videos || mkdir ~/videos
+ *   <span style="color: #FA8072;">( || ):</span> This will only run the second command if the first command fails.     example: cd ~/videos || mkdir ~/videos
 
 *   <span style="color: #FA8072;">ctrl a:</span>This will move the caret to the beginning
 
@@ -108,7 +128,7 @@
 
 *   <span style="color: #FA8072;">Arrow Down:</span> Will move forward in the history towards the most recent call
 
-*   <span style="color: #FA8072;">~:</span> Goes directly to the home folder. So ~/videos will take you to the home of the videos folder.
+*   <span style="color: #FA8072;">~:</span> Goes directly to the home folder. So ~/videos will take you to the home     of the videos folder.
 
 *   <span style="color: #FA8072;">whoami:</span> Reminds you of your username. 
 
@@ -129,7 +149,7 @@
 
 ## <span style="color: red;">ZSH</span>
 
-*   <span style="color: #FA8072;">ZSH</span> "Zed SH" is a shell that runs on your computer that is useful with the terminal.  Bash is one of the most popular shells.  ZSH said that they can improve bash and have tried to improve a few areas that bash lacks.  It is very popular with developers using git, gulp, grunt or a lot of terminal stuff.
+*   <span style="color: #FA8072;">ZSH</span> "Zed SH" is a shell that runs on your computer that is useful with the     terminal.  Bash is one of the most popular shells.  ZSH said that they can improve bash and have tried to           improve a few areas that bash lacks.  It is very popular with developers using git, gulp, grunt or a lot of         terminal stuff.
 
 *   <span style="color: #FA8072;">Oh my ZSH</span> is a framework built on top of ZSH.
 
