@@ -139,6 +139,64 @@
     *   <span style="color: #FA8072;">Space:</span> will scroll one page forward
     *   <span style="color: #FA8072;">b:</span>  will scroll one page backward
 
+## <span style="color: red;">Redirection</span>
+
+*    <span style="color: #FA8072;">Redirection</span> can direct the input and output of a command to and from           other files and programs, and chain commands together in a pipeline.
+
+*   <span style="color: #FA8072;">echo:</span> The echo command accepts something as a standard input and echoes        the information back to the terminal as standard output.
+
+*   <span style="color: #FA8072;">stdin, stdout, stderr</span> _Standard Input_ (stdin) is information inputted         into the terminal through the keyboard or input device. _Standard Output_ (stdout) is the information outputted     after a process is run.  _Standard error_ (stderr) is an error message outputted by a failed process. 
+ 
+*   <span style="color: #FA8072;">cat</span> The cat command outputs the contents of a file to the terminal.            Example.  echo "Hello" > hello.txt  (Here the > command redirects the standard output to a file. "Hello" is         entered as the standard input.  The Standard Output "Hello" is redirected by > to the file hello.txt) In the        command line type cat hello.txt (Now the contents of hello.txt are displayed as Hello)
+
+*   <span style="color: #FA8072;">( > )</span>  Be careful because > will overwrite all original content in a file.     However if you use <span style="color: #FA8072;">( >> )</span> it will take the original contents and add them      to the content of the other file.  Since it is appended to it, it will not overwrite it. 
+
+*   <span style="color: #FA8072;">( < )</span> Pay attention to the direction of the angle bracket.  This will take     the standard input from the file on the right and input it into the program on the left.  Example: cat <            lakes.txt will take the input from the file lakes and the output will appear in the terminal. 
+
+*   <span style="color: #FA8072;">( | )</span> The pipe takes the output of the command and pipes it as input to        the other command.  Think of this as Command to Command redirection.  Multiple pipes can be chained together as     well.  Example ( cat volcanoes.txt | wc | cat > islands.txt )  Here output of volcanoes is piped to wc command.     wc is then piped to cat.  Finally, output of cat is redirected to islands
+
+*   <span style="color: #FA8072;">wc:</span> This command outputs the number of lines, words, and characters in a       file. 
+
+*   <span style="color: #FA8072;">sort:</span> Sort takes the input and orders it alphabetically for the output.        Example: ( cat lakes.txt | sort > sorted-lakes.txt )  Here the command takes output of lakes and pipes it to        sort.  Then the output of sort is redirected to sorted-lakes.txt.  cat sorted-lakes.txt will have display all       the files as they have all been sorted.
+
+*   <span style="color: #FA8072;">uniq:</span> Uniq stands for unique and filters out _adjacent_, duplicate lines       in a file. A more effective way to call uniq is to call sort first and alphabetize a file, then pipe the output     to uniq.  That way you will remove all the duplicates completely as duplicates will all be _adjacent_. Example:     ( sort deserts.txt | uniq > uniq-deserts.txt ) This will take the deserts file and sort first, pipe to uniq and     remove duplicates then take the contents and send to uniq-deserts file.  You can then use the cat file to see       the contents.
+
+*   <span style="color: #FA8072;">grep:</span> _"Global Regular Expression Print"_ will search files for lines that     match a pattern and return the results.  It is also case sensitive.
+
+*   <span style="color: #FA8072;">grep -i:</span> This command enables the command to be case insensitive.  It will     look for the word (mount) regardless of case in the file.   
+
+*   <span style="color: #FA8072;">grep -R:</span> Searches all files in a directory and outputs the filenames and       lines containing matched results.  -R stands for "recursive" Example: (grep -R Arctic                               /home/ccuser/workspace/geography ) will search that specific directory for the string "Arctic" and output the       filenames and line that are matched. 
+
+*   <span style="color: #FA8072;">grep -Rl:</span> will search all the files in a directory and output only             filenames with matched results. The "l" stands for "files with matches"
+
+*   <span style="color: #FA8072;">sed:</span> sed stands for "Strem Editor"  It accepts the input and modifies it       based on an expression before displaying it as output data.  Similar to "Find and Replace".  Example: (sed          's/snow/rain/' forests.txt)  The s stands for "substitution".  It is _Always_ used when using sed for               substitution. Snow is the text to find.  Rain replaces the text and adds it in place.  __Important__ to note        that the command will only replace the __first__ instance of "snow" on a line. _However_ if you use "g" meaning     global it will look through the file and replace all instances of snow with rain.  Example: ( sed                   's/snow/rain/g' forests.txt )
+
+## <span style="color: red;">Enviornment</span>
+
+*   <span style="color: #FA8072;">Environment</span> Each time a new terminal is launched, it creates a new             session.  This session immediately loads settings and preferences that make up the command line environment.
+
+*   <span style="color: #FA8072;">Customizing</span> We can customize and configure the enviornment to support the      commands and programs we create.  This enables custom greetings and command aliases, also allows us to create       variables that we can share across commands and programs.
+
+## <span style="color: red;">Nano</span>
+
+*   <span style="color: #FA8072;">Nano</span> Is a command line text editor. You can use the menu at the bottom for     reference.  The ^ means ctrl.  It works much like a desktop text editor, except that it is accessible from the      command line and only accepts keyboard input. Example:  (nano hello.txt) will open the file in the editor.  
+
+*   <span style="color: #FA8072;">ctrl x:</span>This will exit nano.  
+
+*   <span style="color: #FA8072;">ctrl o:</span> If you write something at the top then hit control and "o" (the         letter) it will __write out__ the information or another way to say save the file.
+
+*   <span style="color: #FA8072;">ctrl g:</span> Opens a help menu
+
+*   <span style="color: #FA8072;">clear</span> Clears the terminal window, moving the command prompt to the top of      the screen. 
+
+*   <span style="color: #FA8072;">ctrl x</span>This will exit nano.
+
+*   <span style="color: #FA8072;">~/.bash_profile</span> This is the name of file used to store enviornment             settings.  It is commonly called "bash profile".  When a session starts, it will load the contents of the bash      profile before executing commands. ( ~ ) means home directory. ( . ) indicates a hidden file. Example: (nano        ~/.bash _profile echo Welcome, Scott Young ) Ctrl o and enter will save.  If you then type source ~/.bash           _profile it should say "Welcome, Scott Young
+
+*   <span style="color: #FA8072;">source</span> If in bash the source makes the changes available right away in the     session that we are in.  Example: source ~/.bash _profile activates the changes in the profile for the current      session.
+
+*   <span style="color: #FA8072;">Aliases</span> While in the bash profile you can use the command <span                style="color: #FA8072;">__alias__</span> which can be used to create keyboard shortcuts, or aliases for             commonly used commands. Example: (alias pd=pwd) Now anytime you need to print the working directory instead of      typing pwd you would type pd. 
+
 ## <span style="color: red;">Cygwin or iTerm</span>
 
 *   <span style="color: #FA8072;">iTerm</span> is another app that is very helpful for having a lot of options in       the terminal.  It is for mac users.
