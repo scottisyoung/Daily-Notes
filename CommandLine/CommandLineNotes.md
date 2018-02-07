@@ -187,15 +187,35 @@
 
 *   <span style="color: #FA8072;">ctrl g:</span> Opens a help menu
 
-*   <span style="color: #FA8072;">clear</span> Clears the terminal window, moving the command prompt to the top of      the screen. 
+*   <span style="color: #FA8072;">clear:</span> Clears the terminal window, moving the command prompt to the top of      the screen. 
 
-*   <span style="color: #FA8072;">ctrl x</span>This will exit nano.
+*   <span style="color: #FA8072;">ctrl x:</span>This will exit nano.
 
-*   <span style="color: #FA8072;">~/.bash_profile</span> This is the name of file used to store enviornment             settings.  It is commonly called "bash profile".  When a session starts, it will load the contents of the bash      profile before executing commands. ( ~ ) means home directory. ( . ) indicates a hidden file. Example: (nano        ~/.bash _profile echo Welcome, Scott Young ) Ctrl o and enter will save.  If you then type source ~/.bash           _profile it should say "Welcome, Scott Young
+*   <span style="color: #FA8072;">~/.bash_profile:</span> This is the name of file used to store enviornment             settings.  It is commonly called "bash profile".  When a session starts, it will load the contents of the bash      profile before executing commands. ( ~ ) means home directory. ( . ) indicates a hidden file. Example: (nano        ~/.bash _profile echo Welcome, Scott Young ) Ctrl o and enter will save.  If you then type source ~/.bash           _profile it should say "Welcome, Scott Young
 
-*   <span style="color: #FA8072;">source</span> If in bash the source makes the changes available right away in the     session that we are in.  Example: source ~/.bash _profile activates the changes in the profile for the current      session.
+*   <span style="color: #FA8072;">source:</span> If in bash the source makes the changes available right away in        the session that we are in.  Example: source ~/.bash _profile activates the changes in the profile for the          current session.
 
-*   <span style="color: #FA8072;">Aliases</span> While in the bash profile you can use the command <span                style="color: #FA8072;">__alias__</span> which can be used to create keyboard shortcuts, or aliases for             commonly used commands. Example: (alias pd=pwd) Now anytime you need to print the working directory instead of      typing pwd you would type pd. 
+*   <span style="color: #FA8072;">Aliases:</span> While in the bash profile you can use the command <span                style="color: #FA8072;">__alias__</span> which can be used to create keyboard shortcuts, or aliases for             commonly used commands. Example: (alias pd=pwd) Now anytime you need to print the working directory instead of      typing pwd you would type pd.
+
+## <span style="color: red;">Enviornment Variables</span>
+
+*   <span style="color: #FA8072;">Enviornment Variables:</span> are variables that can be used across commands and       programs adn hold information about the enviornment. EXAMPLE: export __VARIABLE__=__"Value"__
+
+*   <span style="color: #FA8072;">USER="Scott Young":</span> This will set the enviornment variale USER to a name        "Scott Young". Usually the USER variable is set tot the name of the computers owner. 
+
+*   <span style="color: #FA8072;">Export:</span> Makes a variable available to all child sessions initiated from        the session that you are in.  This is a way to make the variable persist across programs. Example: _export               USER="Scott Young"_
+
+*   <span style="color: #FA8072;">echo $USER:</span> this command returns the value of the variable.  Note that _$_      is always used when returning a __variables value.__
+
+*   <span style="color: #FA8072;">PS1:</span> is a variable that defines the makeup and style of the command            prompt. Example: _Export PS1=">>"_ will set the command prompt variable and export the variable.  It will           change the $ to >>.  After using source, the new prompt will be displayed. 
+
+*   <span style="color: #FA8072;">echo $HOME:</span> This will return the value of the HOME variable in the command      line. This variable is an enviornment variable that displays the path of the home directory. You can customize      the HOME variable if needed, but in most cases this is not necessary. 
+
+*   <span style="color: #FA8072;">echo $PATH:</span> This is also an enviornment variable.  It sotres a list of         directories separated by a colon. Each directory contains scripts for the command line to execute.  The PATH        variable simply lists which directories contain scripts. For example, many commands we have learned are scripts     stored in the bin/directory (/bin/pwd) which is executed with the pwd command or (bin/ls) which is stored in        the ls command.      
+
+*   <span style="color: #FA8072;">env:</span> This command stands for "Environment", and returns a list of the          environment variables for the current user.  This would return a number of variables including, PATH, PWD, PS1,     and HOME.  
+
+*   <span style="color: #FA8072;">env | grep PATH:</span> is a command that displays the value of a single              enviornment variable.  Here the standard output of env is "piped" to the grep command. Grep then searhes for        the values of the variable PATH and outputs it to the terminal.  
 
 ## <span style="color: red;">Cygwin or iTerm</span>
 
