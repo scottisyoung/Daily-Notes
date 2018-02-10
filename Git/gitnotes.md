@@ -19,9 +19,19 @@
     2.  <span style="color: #FA8072;">__A Staging Area__</span> This is where you will list all of the changes you      make in the working directory.
     3.  <span style="color: #FA8072;">__A Repository__</span> This is where Git permanently stores all the changes      as different __versions__ of the project.
 
-*   <span style="color: #FA8072;">(Git Status)</span> This is a way that we can see the changes made to the working     directory. _Untracked Files_ are those that Git sees but has not started tracking changes yet. These files will     be in <span style="color: red;">_RED_</span>.
+*   <span style="color: #FA8072;">(Git Status)</span> This is a way that we can see the changes made to the working     directory. _Untracked Files_ are those that Git sees but has not started tracking changes yet. These files will     be in <span style="color: red;">__RED__</span>.
 
- 
+*   <span style="color: #FA8072;">(Git Add)</span> You can use git add when you have files in the working directory     that need to be added to the staging area. You can add all with (git add .) or by filename.  (git add               "filename").  After the file has been added to the staging area it will turn <span style="color: green;             ">__green__</span> if you check its status.
 
+*   <span style="color: #FA8072;">(git diff)</span> This command tracks the differences between the working             directory and the staging area. (Git diff filename).  Changes made are marked with a + sign and are indicated       in <span style="color: green;">green</span>. Press __q__ to exit diff mode.
+
+*   <span style="color: #FA8072;">(git commit)</span> This command is the last step in the git workflow.  A commit      permanently stores changes from the staging area inside the repository. __-m__ is needed followed by a message      for every commit that is made. It must be in _quotation marks, written in present tense, and brief (less than       50 characters)_. 
+
+*   <span style="color: #FA8072;">(git log)</span> Git log is a good way to refer back to an earlier version of a       project. Commits are stored chronologically in the repository and can be viewed later if needed. In the Output      Notice 
+    *   A 40 character code called __SHA__, is presented first.  It uniquely identifies the commit and appears in       <span style="color:orange;">__Orange__</span>.
+    *   The Commit Author (you!) is next
+    *   The Date and Time of the Commit
+    *   The Commit Message
+    
 
 
