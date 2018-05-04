@@ -81,13 +81,31 @@
             *   "Scott Young".reverse
             # ==> gnuoY ttocS
 
-#### .upcase / .downcase
+####  .include
+            *   user_input.include? "s"
+            *   this will look for s in the user_input.  the ? at the end means true. 
+
+####  .gsub
+            *   user_input.gsub(/s/, "th")
+            *   this will replace the s with a th
+
+#### .upcase / .downcase / .capitalize 
 
             *   "scott young".upcase
             # ==> SCOTT YOUNG
 
             *   "SCOTT YouNG".downcase
             # ==> scott young
+
+            *   "scott".capitalize
+            # ==> Scott
+            
+#### using !
+*   Using an Exclamation point will repeat the method on the variable that you set it equal to.  Example below:  Now     anytime that you use first_name variable, it will automatically capitalize the first letter.  You can use this       with other methods as well... upcase!, downcase! etc...
+
+            * first_name = "Scott".capitalize!
+            # ==> Scott
+        
 
 ## <span style="color: blue;">Naming Conventions</span>
 
@@ -112,7 +130,137 @@
                   puts brother = "Craig Young".downcase.reverse.upcase
                   # ==> GNUOY GIARC
 
+## <span style="color: blue;">Getting Input / Printing the Output</span>
 
+*   _gets_ is the Ruby method that gets input from the user. When getting input, Ruby automatically adds a blank         line after each bit of input.
+*   _chomp_ removes that extra line.  The program works fine without chomp but if not used will add the line. 
+    EXAMPLE:  first_name = gets.chomp    (this variable first_name is set to use .chomp to remove the extra line)  At this time, the terminal will actually ask you to enter in a value for first_name. 
+*   _String Interpolation_: Once a variable is defined for example: _monkey = "Curious George"_ then if you add a        string that says _"I took #{monkey} to the zoo"_, Ruby will do something called String interpolation and replace     #monkey with "Curious George"
 
+## <span style="color: blue;">Control Flow</span>
 
+*   <span style="color: #FA8072;">_Control Flow_</span> gives us the flexibility we're looking for. We can select        different outcomes depending on information that user types, the result of a computation, or the value returned      by another part of the program. 
+
+*   <span style="color: #FA8072;">_If_</span> statements.  Take in an expression and relates it to whether the           statement is true or false.  If false, Ruby will not execute that block of code and will skip to the next thing.     If should be indented two spaces, then print should be indented. EXAMPLE: below
+
+            * if 1 < 2 
+                print "I'm getting printed because one is less than two!"
+              end
+
+*   <span style="color: #FA8072;">_elsif / else_</span> statements to provide other stipulations to the statement.       If the if statement is true run that, however if false run the else statement. elseif provides more than 2           statements.  See example below.
+
+            *   print "What is the temperature?"
+                temp = Integer(gets.chomp)
+
+                if temp > 90 
+                print "It is too hot and I will just stay inside."
+                elsif temp > 70
+                print "Perfect Weather"
+                else temp < 70
+                print "Too Cold"
+                end
+
+*   <span style="color: #FA8072;">_Unless_</span> Sometimes you want to use control flow to check if something is        false rather than if it is true.  You can reverse your if/else OR you can use unless.  Example below: 
+
+            *   hungry = true 
+
+                unless hungry
+                puts "I'm writing Ruby programs!"
+                else
+                puts "Time to eat!"
+                end  
+
+                # ==> Time to eat!
+
+## <span style="color: blue;">Control Flow and it's Operators</span>
+
+*   <span style="color: #FA8072;">_Equal or Not_</span> We can use == to check to see if two things      are equal       (comparator or rational operator)
+*   <span style="color: #FA8072;">Equal</span>: ==
+*   <span style="color: #FA8072;">Not Equal</span>: !=
+
+                *   is_true = 2 != 3 
+                    is_false = 2 == 3
+
+*   <span style="color: #FA8072;">_Less than or Greater than_</span> We can also check to see if values are less         than, greater than, equal to, less than and equal to, or great than and equal to. 
+*   <span style="color: #FA8072;">Less than</span>: <
+*   <span style="color: #FA8072;">Greater than</span>: >
+*   <span style="color: #FA8072;">_Greater than or equal to</span>: >=
+*   <span style="color: #FA8072;">Less than or equal to</span>: <=
+
+*   <span style="color: #FA8072;">AND</span> You can use logical and boolean operators in Ruby as well.
+*   <span style="color: #FA8072;">AND</span>: &&, which only results in true when __BOTH__ expression on either side     of && are true.  EXAMPLES:
+
+                *   true && true # => True
+                *   true && flase # => False
+                *   false && true # => False
+                *   false && false # => False
+
+                *   1 < 2 && 2 < 3  # => True
+
+*   <span style="color: #FA8072;">OR</span> which is called an __Inclusive Or__ because it evaluates to true when        one or the otehr or both expressions are true.
+*   <span style="color: #FA8072;">OR</span>: ||
+
+                *   true || true  # => True
+                *   true || false # => True
+                *   false || true # => True
+                *   false || false # => False
+
+*   <span style="color: #FA8072;">NOT</span> Which makes true values false and vice-versa
+*   <span style="color: #FA8072;">NOT</span>: !
+
+                *   !true # => False
+                *   !false # => True
+
+## <span style="color: blue;">Combining Boolean Operators</span>
+
+*   You can combine operators in expressions like (x && (y || w)) && z.  This can be very useful in your programs.
+*   Expressions in parenthesis are always evaluated first.
+
+*   MORE EXAMPLES:
+
+            *       print "How many wins do you have?"
+                    number = Integer(gets.chomp)
+
+                    if number >= 5
+                    print "You are lucky"
+                    elsif number < 5 || number > 2
+                    print "You have done well"
+                    else number < 2 && number > 0
+                    print "better luck next time"
+                    end
+
+            *       a = 10
+                    b = 11
+                    if a < b
+                    print "a is less than b!"
+                    elsif b < a
+                    print "b is less than a!"
+                    else
+                    print "b is equal to a!"
+                    end
+            
+            *       problem = true
+
+                        print "Good to go!" unless problem
+                    if problem == true
+                        print "better fix things first!"
+                    end
+
+                    # => better fix things first!
+
+## <span style="color: blue;">Combining Everything for Fun</span>
+
+*   Fun Examples
+
+            *   print "What is your first name?"
+                user_input = gets.chomp
+                user_input.downcase!
+
+                if user_input.include? "s"
+                    user_input.gsub!(/s/, "th")
+                else 
+                print "Wait, there is no Sth in your name, you are sthoooo not fun! "
+                end
+
+                puts my_string = "Hi #{user_input}!!!"
 
