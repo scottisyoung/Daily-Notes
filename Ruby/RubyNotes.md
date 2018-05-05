@@ -89,6 +89,10 @@
             *   user_input.gsub(/s/, "th")
             *   this will replace the s with a th
 
+####  .split
+            *   text.split(",")
+            *   This will take in a string and return an array.  If we in a bit of text in parentheses, .split will      divide the string wherever it sees a bit of text, called a __delimiter__. Like above, the text will      be divided wherever it sees a ,
+
 #### .upcase / .downcase / .capitalize 
 
             *   "scott young".upcase
@@ -446,3 +450,46 @@
 
 ### <span style="color: red;">REDACTED!</span>
 ## <span style="color: blue;">Hiding Information</span>
+
+*   Hiding information is a large part of programming.  Protecting important information through passwords,              establishing secure connections, and securing programs all rely on controlling access to that information.
+
+*   Later we will get more into it but right now we can use arrays and iterators to hide some info.
+
+            *   puts "Enter some text: "
+                text = gets.chomp
+
+                puts "Enter words to redact: "
+                redact = gets.chomp
+
+                words = text.split(" ")
+                words.each { |word| 
+                if word == redact
+                    print "REDACTED "
+                else
+                        print word + " "
+                end }
+
+### <span style="color: red;">Data Structures</span>
+## <span style="color: blue;">Creating Arrays</span>
+
+*   Stores a list of values in a single variable.
+*   You can make an array from almost anything.  Stings, numbers, booleans, etc... 
+*   You can make an array of arrays as well 
+
+*   _Access by Index_:  Each element in an array has an index.  First is 0, next is 1, etc ...  We can access            elements of the array directly through number brackets. 
+
+            *   array = [5,7,9,2,0]
+                array[2]
+
+                # returns "9"
+
+## <span style="color: blue;">Hashes</span>
+*   Arrays are indexed with numbers but what if we dont want to use numbers or have things go in order?  We then         will use something called a hash.
+
+*   Hashes are similar to JavaScript Objects or Python Dictionaries.  A hash is a collection of key-value pairs.  
+
+            *   hash = {
+                key1 => value1,
+                key2 => value2,
+                key3 => value3
+            }
