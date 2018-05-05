@@ -53,7 +53,7 @@
         *   Example:  puts "What's up?"
                       print "Scott Young"   
 
-## <span style="color: blue;">Everything is an Object, thus we can use "Methods"</span>
+### <span style="color: red;">Everything is an Object, thus we can use "Methods"</span>
 
 *   _Methods_: are certain built-in-abilities. We can think of them as skills. 
 *   _Interpreter_: is the program that takes the code you write and runs it. 
@@ -99,7 +99,7 @@
 
             *   "scott".capitalize
             # ==> Scott
-            
+
 #### using !
 *   Using an Exclamation point will repeat the method on the variable that you set it equal to.  Example below:  Now     anytime that you use first_name variable, it will automatically capitalize the first letter.  You can use this       with other methods as well... upcase!, downcase! etc...
 
@@ -264,3 +264,185 @@
 
                 puts my_string = "Hi #{user_input}!!!"
 
+### <span style="color: red;">Loops and Iterators</span>
+## <span style="color: blue;">While Loops</span>
+
+*   Sometimes you want to repeat an action __WHILE__ a condition is true, but you don't know how many times you will    have to repeat the action.  An example would be repeatidly prompting a user for an answer if they keep forgetting    to give you it.  The while loop checks for a condition and while it is the loop keeps running.  As soon as the       condition stops, the loop stops. 
+
+            *   counter = 1
+                while counter < 11
+                puts counter
+                counter = counter + 1
+                end
+
+            *   i = 0
+                while i < 5
+                puts i
+                i = i + 1
+                end
+
+## <span style="color: blue;">Danger: Infinite Loops</span>
+
+*   Make sure that you always give loops a condition to stop.  If not, it will keep checking for numbers and will        never end.  It will cause your program to crash.  Avoid them at all costs!
+
+## <span style="color: blue;">Until Loops</span>
+
+*   _The Until Loop_ is sort of like a backwards while loop.  
+
+            *   i = 0
+                until i == 6
+                i = i + 1
+                end
+                puts i
+            
+            *   counter = 1
+                until counter > 10
+                puts counter
+                counter = counter + 1
+                end
+
+## <span style="color: blue;">More Assignment Operators</span>
+
+*   +=
+*   -=
+*   *=
+*   /=
+
+*   When you write counter += 1, you are telling Ruby to add 1 to countner, then assign that new value back to the       counter.
+*   Ruby does not use ++ or --
+
+            *   counter = 1
+                while counter < 11
+                puts counter
+                counter += 1
+                end
+
+## <span style="color: blue;">For Loops</span>
+*   Sometimes you do know how many times you will be looping and in that case, you will use a for loop. 
+
+            *   for num in 1...10
+                puts num
+                end
+            
+            * prints numbers 1 -9
+
+*   _Inclusive and Exclusive Ranges_ 
+*   Using ... three dots makes the 10 not inclusive.
+*   Using .. 2 dots makes the 10 inclusive.
+
+            *   for num in 1..15
+                puts num
+                end
+
+            * prints numbers 1-15   Includes the 15
+
+## <span style="color: blue;">Loop Method</span>
+*   An iterator is just a Ruby Method that repeatedly invokes a block of code.  
+*   In Ruby, curly braces are generally interchangeable with the keywords "do" (to open the block) and "end" (to         close it).  
+
+            *   i = 0
+                loop do
+                i += 1
+                print "#{i}"
+                break if i > 5
+                end
+
+*   BREAK is a great keyword to make sure to end the loop as soon as a condition is met. 
+
+            *   i = 20
+                loop do
+                i -= 1
+                print "#{i}"
+                break if i <= 0
+                end
+
+*   NEXT:  The next keywork can be used to skip over certain steps in the loop.  Such as not printing out the even       numbers in a sequence. 
+
+            *   for i in 1..5
+                next if i % 2 == 0
+                print i
+                end
+
+            *   i = 20
+                loop do
+                i -= 1
+                next if i % 2 != 0
+                print "#{i}"
+                break if i <= 0
+                end
+
+## <span style="color: blue;">Saving Multiple Values</span>
+*   In ruby we can pack multiple values into a single variable using an array.
+*   An Array is just a list of items between square brackets.  [1,2,3,4]
+
+            *   my_array = [1,2,3,4,5]
+
+## <span style="color: blue;">The .each iterator</span>
+*   The .each method is more powerful than the loop operator.  
+
+            *   object.each { |item|
+                # Do something
+            }
+
+            OR
+
+            *   object.each do |item|
+                # Do something
+            end
+
+            * EXAMPLES
+            *   array = [1,2,3,4,5]
+
+                array.each do |x|
+                x += 10
+                print "#{x}"
+                end
+
+            *   odds = [1,3,5,7,9]
+
+                odds.each do |x|
+                x *= 2
+                print "#{x}"
+                end
+
+## <span style="color: blue;">The .times iterator</span>
+*   _The Times Method_ is like a super compace for loop: it can perform a task on each item in an object a specified     number of times. 
+
+            *   5.times { print "Scott Rules, Watson Drools! "}
+
+            *   it will print out that string 5 times
+
+## <span style="color: blue;">Recap of Loops</span>
+            
+            *   While Loops
+            *   i = 1
+                while i <= 50
+                print i
+                i += 1
+                end
+
+            *   Until Loops
+            *   j = 1
+                until j <= 50 do
+                print j
+                j += 1
+                end
+            
+            *   For Loops
+            *   for i in 1..50
+                print i
+                end
+
+            *   Loop Method
+            *   i = 0
+                loop do
+                print "Ruby!"
+                i += 1
+                break if i == 30
+                end
+            
+            *   .times Method
+            *   30.times { print "Ruby!"}
+
+### <span style="color: red;">REDACTED!</span>
+## <span style="color: blue;">Hiding Information</span>
