@@ -493,3 +493,22 @@
                 key2 => value2,
                 key3 => value3
             }
+
+            *   my_hash = { "name" => "Eric",
+                "age" => 26,
+                "hungry?" => true
+                }
+
+                puts my_hash["name"]
+                puts my_hash["age"]
+                puts my_hash["hungry?"]
+
+                # => Eric, 26, true
+
+## <span style="color: blue;">Hash.new</span>
+
+*   You can also create a has using Hash.new
+*   Setting a variable equal to Hash.new creates a new, empty hash,  It is the same as setting the variable equal to     empty curly braces. 
+
+                *   my_hash = Hash.new
+
