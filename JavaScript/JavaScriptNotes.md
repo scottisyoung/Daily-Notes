@@ -39,6 +39,23 @@
 *   Multiply:  *
 *   Divide: /
 
+*   _String Interpolation or String Concatination_:  String interpolation is inserting the data saved from a           variable into a string. String Concatination is the addition of multiple strings. This can be done with the        addition operator.   Example: <p></p>
+
+            let favoriteAnimal = "Watson";
+
+            console.log("My favorite animal is a " + favoriteAnimal + "!!!")
+
+            The Result is:   My favorite animal is a Watson!!!
+
+*   We can also insert varibles into strings by using other methods. Examples below: <p></p>
+        1.  Instead of using quotes, you can use backticks  ``. `Watson` <p></p>
+        2.  You can wrap your variable with ${myVariable}, followed by a sentence.  No + is necessary.
+
+                Example:
+
+                let myPet = 'watson';
+                console.log(`I own a pet ${myPet}.`)    Output: I own a pet watson.
+
 ### <span style="color: red;">Properties</span>
 
 *   When you introduce a new piece of data into a JS program, the browsers saves it as an instance of the data         type.
@@ -69,13 +86,20 @@
 
 ### <span style="color: red;">Variables</span>
 
+*   Variables can be saved to Let, Const, and Var
+*   __Const__ is short for constant.  It is a keyword that creates a variable with a value that _CANNOT_ change.
+*   If you try to change the value on a constant variable, it will throw you an error message. 
+*   __Let__ variables however can be reassigned with different values.  For example,  let changeMe = true; However     if I change the value... changeMe = false;  It will then be false.
+*   Let: allows you to declare variables that are limited in scope to the block, statement, or expression which is     used.  
+*   __Var__ is a variable keyword that defines a variable globally or to an entire function regardless of block        scope. 
 *   In Computer Science, Data is _anything_ that is meaningful to the computer.  Since JS provides 7 different         data types we can use __Variables__ to store and manipulate that data in a dynamic fashion. 
 *   They store data by using a "label" to point to the data rather than using the data itself.  
 *   To declare a variable:   var ourName;  This creates a variable that is called ourName.  
 *   We then want the variable to have a value stored to it with the _assignment operator aka "="_ ...  var             ourName = "scott".
 *   _Initializing Variables_:  it is common to _initialize_ a variable to an initial value in the smae line as it      is declared. var myVar = 0;
 *   _Uninitialized Variables_:  When variables are declared but not assigned their value is undefined.  Which          means if you do a mathimatical operation the result will be _NAN_ or "Not a Number".  If you _concatenate_ a       string with an undefined variable you will get a literal string of "undefined". 
-*   In JS all variables and function names are CASE SENSITIVE.  It is important to use __camelCase__.  The first       word is lowercase and the first letter of each subsequent words is capitalized. 
+*   In JS all variables and function names are CASE SENSITIVE.  It is important to use __camelCase__.  The first       word is lowercase and the first letter of each subsequent words is capitalized.
+
 
 ### <span style="color: red;">Incementing Numbers / Creating Decimals / Remainders</span>
 
