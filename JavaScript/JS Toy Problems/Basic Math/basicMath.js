@@ -37,3 +37,22 @@ function exponent(num, numInc) {
   }
   console.log(exponent(2,3));
 
+// Convert Celsius to Fahrenheit
+// Changing temperature
+
+function convertToF(celsius) {
+    var fahrenheit;
+    fahrenheit = (celsius * 9/5) + 32;
+    return fahrenheit;
+}
+ convertToF(30);
+
+// Test Scores
+//  Finding out the percentage on a test score
+
+ function scoreTest(correct, questions) {
+    var percent;
+    percent = (correct / questions) * 100;
+    return percent;
+}
+scoreTest(18,20);
