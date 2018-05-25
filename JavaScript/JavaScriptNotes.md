@@ -56,6 +56,11 @@
                 let myPet = 'watson';
                 console.log(`I own a pet ${myPet}.`)    Output: I own a pet watson.
 
+*   We can also concatenate strings by using the += operator. 
+
+                var myStr = "This is the first sentence. ";
+                myStr += "This is the second sentence.";
+
 ### <span style="color: red;">Properties</span>
 
 *   When you introduce a new piece of data into a JS program, the browsers saves it as an instance of the data         type.
@@ -77,12 +82,29 @@
 *   If you wanted a whole number, you can use Math.floor() which takes a decimal and rounds it to the nearest          whole number.
 *   console.log(Number.isInteger(2017));  will return true because 2017 is an integer. 
 
-### <span style="color: red;">Comments</span>
+### <span style="color: red;">Comments / Escaping Literal Quotes in Strings</span>
 
 *   Just like in any program, it is important to be able to write comments.  There are two ways to write comments.     <p></p>
 
     1. _A Single Line Comment_:   // before a line. <p></p>
     2. _A Multiple-Line Comment_:  /* before and */ at the end. 
+
+*   What happens in a string if you need to use quotes?  You can __Escape__ by using a _backslash_ ( \ ).
+
+    1. var sampleStr = "Alan said, \"Peter is learning\"."; <p></p>
+
+*   __Escaped Characters__
+
+    1.  \ '  Single Quote  
+    2.  \ "  Double Quote
+    3.  \ \  Backslash
+    4.  \ n  New Line
+    5.  \ r  Carriage Return
+    6.  \ t  Tab 
+    7.  \ b  Backspace
+    8.  \ f  Form Feed
+
+*   If you want to have quotes inside quotes, you can escape or use opposite types.  Like single for outside and       double for the inside quotes. __'Scott is cool. "yep".';__
 
 ### <span style="color: red;">Variables</span>
 
@@ -99,6 +121,7 @@
 *   _Initializing Variables_:  it is common to _initialize_ a variable to an initial value in the smae line as it      is declared. var myVar = 0;
 *   _Uninitialized Variables_:  When variables are declared but not assigned their value is undefined.  Which          means if you do a mathimatical operation the result will be _NAN_ or "Not a Number".  If you _concatenate_ a       string with an undefined variable you will get a literal string of "undefined". 
 *   In JS all variables and function names are CASE SENSITIVE.  It is important to use __camelCase__.  The first       word is lowercase and the first letter of each subsequent words is capitalized.
+*   var myName = "your name";   This is called a __String Literal__.
 
 
 ### <span style="color: red;">Incementing Numbers / Creating Decimals / Remainders</span>
@@ -159,3 +182,115 @@
             }
             calculateTaxes(1,10);
 
+## <span style="color: blue;">Control Flow</span>
+
+*   Control Flow is all about learning the building blocks of JavaScript.  Writting programs that make decisions.
+*   __Control Flow__ statements enable JS programs to execute code based on conditions.  If a given condition is       true, we execute a block of code. If false, we execute another.  
+
+### <span style="color: red;">If / Else Statements</span>
+
+*   The core task of programming is writing lists of instructions for computers, or translating our ideas from         human-speak into computer-speak. 
+*   Lines of code between {} are called __CODE BLOCKS__.  If / else statments have two code blocks minimum.  
+*   Basic if / else statement below:
+
+                    let isSoccerFan = true;
+
+                    if (isSoccerFan === true) {
+                        console.log("Goal!!!");
+                    }
+                    else {
+                        console.log("No Goal, Booo");
+                    }
+
+*   Even non-boolean data types (strings / numbers), can still be used like booleans to determine flow.  
+*   Truthy or Falsy values means if a statement is true or false when used to control flow. 
+*   All variables that have been declared and assigned are truthy unless they contain one of the following 6           values. <p></p>
+
+        1.  False
+        2.  0 and -0
+        3.  "" and '' (empty strings)
+        4.  null
+        5.  undefined
+        6.  NaN (Not a Number)
+
+*   Examples Below:
+
+          let variableOne = 'I Exist!';
+                if (variableOne) {
+                // This code will run because variableOne contains a truthy value.
+                } else {
+                // This code will not run because the first block ran.
+                }     
+
+            let numberOfApples = 0;
+                if(numberOfApples){
+                console.log('Let us eat!'); // This code will not run because 0 is a falsy value
+                } else {
+                console.log('No food left!'); // This code will run
+                }
+
+*   An exclamation point (!) can change a value from truthy to falsy.  Example: if(!numberOfApples)....
+
+### <span style="color: red;">Comparison Operators & Logical Operators</span>
+
+*   (Less than < ), (Greater than > ), (Less than or equal to <= ), (Greater than or equal to >= ).
+*   === three signs in a row is equal
+*   !== this is not equal
+*   One equal sign is used to assign a variable, we use three to compare values. 
+*   && means that both statements must be true.
+*   || means either can be true (or).
+
+### <span style="color: red;">Multiple Conditions / Switch Statements / Ternary Operator</span>
+
+*   __Multiple Conditions__: We can add more conditions to statements with (else if).
+
+             let moonPhase = 'solar eclipse';
+
+                if (moonPhase === 'full') {
+                console.log('Howl!');
+                }
+                else if(moonPhase === "mostly full") {
+                console.log("Arms and legs are getting hairier.");
+                } 
+                else if(moonPhase === "mostly new") {
+                console.log("Back on two feet.");
+                }
+                else {
+                console.log('Invalid moon phase');
+                }   
+
+*   If we want to write a program with 25 different conditions, if/else statements can be ugly to read. <p></p> 
+
+*   __SWITCH__ statements are used when we are writting many lines of code. 
+*   To a computer if/else or switch statements are exactly the same. 
+
+*   The switch keyword initiates the statement.  Case is like the else/if part of the statement.  Break is a           keyword that stops the program. At the end of each statemnent there is a default condition.  If none of the        cases are true, then the default will run. 
+
+            let moonPhase = 'full';
+
+                switch (moonPhase) {
+                case "full":
+                    console.log('Howl!');
+                    break;  
+                case "mostly full":
+                    console.log('Arms and legs are getting hairier');
+                    break;
+                case "mostly new":
+                    console.log('Back on two feet');
+                    break;
+                default:
+                    console.log('Invalid moon phase');
+                        break;
+                }           
+
+*   __Ternary Operator__: is shorthand and makes things even easier to read.  
+*   They are shorthand for if/else statements. 
+
+                isNightTime ? console.log('Turn on the lights!) :
+                console.log('Turn off the lights!);
+
+*   __isNightTime ?__  is the conditional statement to check to see if it is truthy.
+*   __:__ a colon separates the two different blocks of code that are executed.  (kind of works as the else part)
+
+                favoritePhrase === 'Love That!' ? console.log('I love that!')
+                : console.log("I don't love that!");
