@@ -294,3 +294,124 @@
 
                 favoritePhrase === 'Love That!' ? console.log('I love that!')
                 : console.log("I don't love that!");
+
+## <span style="color: blue;">Functions</span>
+
+*   A function is a block of code that is designed to do a task
+*   Functions are like recipes, they accept data, perform actions on that data and return a result.
+*   The beauty of a function is that they are reusable.
+
+### <span style="color: red;">Parts of a Function</span>
+
+*   _Name_:  Usually a function is given a name that it can later be called by and is always writen in camelCase. 
+*   _Parameters_: (), Are made so that the function can accept data.  Parameters are variables in a function            definition that __REPRESENT__ data we can input into the function.  We can set one or multiple parameters.  
+*   _Block_: The block is the part of the function inside the {} curly braces.  It is the function body, or the JS      statements that define the function and is followed by a semi-colon. 
+*   _Return_: we can use the return keyword inside of the block of the function to return the result of the             function. We usually set it to a value of a variable. 
+*   _Executing or Calling the Function_:  This is done after the block and is done by writing the name of the           function with (); afterwards. 
+*   _Argument_:  The argument is what will be put inside the () when a function is called.  The parameters recieve      the argument and then pass it through the function body. If there is multiple parameters, there must be            multiple arguments. 
+
+### <span style="color: red;">Function Declarations or Expressions</span>
+
+*   A _Function Declaration_ is a function that is bound to an _identifier_ or _name_.
+*   Example:
+
+            function square(number) {
+                return number * number;
+            }
+            console.log(square(5));
+
+*   Function declarations require the keyword function, a name, and a function body.  
+*   Another Example:
+
+            function isGreaterThan(numberOne, numberTwo) {
+                if (numberOne > numberTwo) {
+                    return true;
+                } else {
+                    return false;
+                }
+                }
+
+                console.log(isGreaterThan(5,2));
+
+*   A _Function Expression_ is similar to a function declaration, with the exception that the identifier can be         omitted.
+*   This creates what is called an __Anonymous Function__.  
+*   Function expressions are often stored in _variables_.  You can identify them because they do not have a name        immediately trailing the function keyword.  
+*   Example:
+
+        const square = function (number) {
+            return number * number;
+        };
+
+        console.log(square(5));
+*   Arrow Functions are known for being the shorter syntax for function expressions. 
+
+
+### <span style="color: red;">Arrow Functions</span>
+ 
+*   An _Arrow Function_ is a syntax or way of writting functions that is considered the new shorthand way of           writting a function. 
+*   const name () => {}  is the syntax.
+*   Example:
+
+                const takeOrder =(topping, crustType) => {
+                    console.log('Order: ' + crustType + ' pizza topped with ' + topping);
+                };
+
+                takeOrder('mushrooms, pepperoni', 'thin crust');
+
+*   Further Example:
+
+                let orderCount = 0;
+
+                const takeOrder = (topping, crustType) => {
+                orderCount++;
+                console.log('Order: ' + crustType + ' pizza topped with ' + topping);
+                };
+
+                const getSubTotal = (itemCount) => {
+                    return itemCount * 7.5;
+                }
+
+                const getTax = (itemCount) => {
+                    return getSubTotal(itemCount) * 0.06;
+                }
+
+                    const getTotal = (itemCount) => {
+                    return getTax(itemCount) + getSubTotal(itemCount);
+                }
+
+                takeOrder('mushroom', 'thin crust');
+                takeOrder('spinach', 'whole wheat');
+                takeOrder('pepperoni', 'brooklyn style');
+
+                console.log(getSubTotal(orderCount));
+                console.log("Total price with tax: " + getTotal(orderCount));
+
+*   In JS there are several ways to refactor arrow function syntax.
+*   We can refactor in 3 ways.<p></p>
+        1.  Functions that take a single parameter should not use parenthesis. The code will still work but it is      better practice to omit the parenthese around single parameters.  If a function takes in zero or           multiple parameters, Parenthesis are required. <p></p>
+        2.  A function composed of a sole single-line block is automatically returned.  The keyword return can be      removed.  This is referred to as __implicit return__. <p></p>
+        3.  A function composed of a sole single-line block does not need brackets. <p></p>
+
+*   Examples:
+
+            Original Expression 
+
+                    const multiplyByNineFifths = (celsius) => {
+                        return celsius * (9/5);
+                    }
+
+            1.  The parenthesis around celsius have been removed, since its a single parameter. 
+
+                const multiplyByNineFifths = celsius => { 
+                    return celsius * (9/5);
+                }
+
+            2.  The return keyword has been removed since the function consists of a single-line block.
+
+                const multiplyByNineFifths = celsius => { 
+                    celsius * (9/5);
+                }
+
+            3.  The {} curly braces have been removed since the function consists of single-line block. 
+
+                const multiplyByNineFifths = celsius => celsius * (9/5);

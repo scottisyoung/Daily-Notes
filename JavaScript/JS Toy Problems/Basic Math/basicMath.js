@@ -56,3 +56,38 @@ function convertToF(celsius) {
     return percent;
 }
 scoreTest(18,20);
+
+// Random Selection
+// Choosing a number at random
+
+let randomPost = Math.floor(Math.random() * 7);
+let post = "";
+
+switch(randomPost) {
+    case 0:
+        post = "Oslo";
+        break;
+    case 1:
+        post = "Borgund, Stegastein, Vossevagen";
+        break;
+    case 2:
+        post = "Bergen";
+        break;
+    case 3:
+        post = "Hudlefossen, Drive to Alesund";
+        break;
+    case 4:
+        post = "Alesund";
+        break;
+    case 5:
+        post = "Geraingerfjord, Hellsyth";
+        break;
+    case 6:
+        post = "Bodo, Narvik";
+        break;
+    case 7:
+        post = "Lofoten Islands"
+        break;
+}
+
+console.log(post);
