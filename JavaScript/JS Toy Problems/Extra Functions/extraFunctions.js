@@ -78,3 +78,61 @@ const getUserChoice = userInput => {
 
 // SLEEP DEBT CALCULATOR //////////////////////////////////////////////////////////////////////////////////////////
 
+// This is the amount of hours you slept this week
+
+function getSleepHours(day) {
+    switch (day) {
+      case "Monday":
+          return 6;
+      case "Tuesday":
+          return 6;
+      case "Wednesday":
+          return 6;
+      case "Thursday":
+          return 10;
+      case "Friday":
+          return 5;
+      case "Saturday":
+          return 6;
+      case "Sunday":
+          return 5;
+    }
+  }
+
+  // This is the total of the week
+  
+  function getActualSleepHours() {
+    return getSleepHours('Monday') + getSleepHours("Tuesday") + getSleepHours("Wednesday") + getSleepHours("Thursday") + getSleepHours("Friday") + getSleepHours("Saturday") + getSleepHours("Sunday")
+  }
+
+  // This is what is ideal for you
+  
+  function getIdealSleepHours() {
+    var idealHours = 7;
+    return idealHours * 7;
+  }
+  
+  // This is the difference between the two 
+
+  function calculateSleepDebt() {
+    var actualSleepHours = getActualSleepHours();
+    var idealSleepHours = getIdealSleepHours();
+    
+    if(actualSleepHours === idealSleepHours){
+       console.log("Perfect amount of sleep")
+       } 
+    if (actualSleepHours > idealSleepHours) {
+        console.log('More sleep than you need')
+       } 
+    if (actualSleepHours < idealSleepHours) {
+         console.log("You need more rest!!! You got " 
+         + (idealSleepHours - actualSleepHours) 
+         + ' hours less than what you need for the week.')
+       };
+  }
+  
+  calculateSleepDebt();
+
+
+
+  
