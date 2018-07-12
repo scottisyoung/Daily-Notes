@@ -26,12 +26,39 @@
 
 ## <span style="color: blue;">NPM</span>
 
+*   NPM is a tool that allows us to grab code from other developers.
 *   Node.js Package Manager
+*   NPM is a repository of JavaScript files and JS libraries.
 *   Is extremely important and a huge part of Node.
 *   Used to install  node programs / modules
 *   Easy to specify and link dependencies
 *   Modules get installed into the node_modules folder. 
 *   You can install in the node_modules folder or Globally
+*   Inside our own code we use a require() keyword that asks to use other code. This keyword looks through our computer finds the code we are looking for and brings it in. From NPM we bring code into our computer and then use the require keyword to bring it into our own code to be used. It is brought in from the Node Modules Folder. 
+* For example if we install "express" in our project we require it to be used like the following...
+    *   const express = require('express');
+* We do not use "./express" but only "express".
+    * FRONT END : Uses Import Keyword,  
+        * Import React from "react";
+    * BACK END : Uses Require Keyword,
+        * var react = require("react");
+        * Node.js does not support the "Import" construct. 
+    
+
+## <span style="color: blue;"> NPM Install</span>
+
+*   npm install (name of what we want to install)
+*   This can install all sorts of programs.
+*   It is very common to see the error, e access permission denied. Please try running this command again as root/administrator. We can run this command by using __SUDO__ in front. "Super User/Administrator"
+*   You can install multiple things at one time as long as they are separated by a space...
+    *   npm install express body-parser
+*   We DO NOT want to commit our node modules to github so we create a file called .gitignore. 
+* Inside of .gitignore list out the programs we want git to ignore such as node_modules.
+*   If you forget and accidentally add node modules to git, google how to delete it from github, there are a few extra steps. 
+* Using __--save__ makes sure that the dependency you are installing is always available and it is automatically added to your package.json dependencies.
+* __-g__ puts the file in a global location.
+
+
 
 ### <span style="color: red;">Popular Modules</span>
 
@@ -67,3 +94,4 @@
 *   use ctrl c 2 times to exit that environment.
 
 *   If you have a file that is a file with the js extension such as app.js,  you can cd into that folder and then       type. node app.js.  From there you can run node in the command line, in that file. So if you type anything into     the app.js file and go to your command line and type (node app), you will see whatever you typed in that app.js     file. 
+

@@ -240,6 +240,65 @@
 
 *   To change these themes in Cygwin, simply right click and you will have the ability to adjust accordingly. 
 
+### <h2 style="color: red;">Command Line Essentials</h2>
+
+* https://learnpythonthehardway.org/book/appendixa.html
+* Salmon Colored: is the same for windows, mac and linux
+* Turquoise Colored: are different
+
+### <span style="color: gold;"> Windows Commands :</span>
+
+* pwd : <span style="color: salmon"> _print working directory_</span>
+* hostname : <span style="color: salmon">_my computer's network name_</span>
+* mkdir : <span style="color: salmon">_make directory_</span>
+* cd : <span style="color: salmon">_change directory_</span>
+* ls : <span style="color: salmon">_list directory_</span>
+* rmdir : <span style="color: salmon">_remove directory_</span>
+* pushd : <span style="color: salmon"> _push directory_</span>
+* popd : <span style="color: salmon"> _pop directory_</span>
+* cp : <span style="color: salmon">_copy a file or directory_</span>
+* robocopy : <span style="color: turquoise">_robust copy_</span>
+* mv : <span style="color: salmon">_move a file or directory_</span>
+* more : <span style="color: turquoise">_page through a file_</span>
+* type : <span style="color: turquoise">_print the whole file_</span>
+* forfiles : <span style="color: turquoise">_run a command on lots of files_</span>
+* dir -r : <span style="color: turquoise">_find files_</span>
+* select-string : <span style="color: turquoise">_find things inside files_</span>
+* help : <span style="color: turquoise">_read a manual page_</span>
+* helpctr : <span style="color: turquoise">_find what man page is appropriate_</span>
+* echo : <span style="color: salmon">_print some arguments_</span>
+* set : <span style="color: turquoise">_export/set a new environment variable_</span>
+* exit : <span style="color: salmon">_exit the shell_</span>
+* runas : <span style="color: turquoise">_DANGER! become super user root DANGER!_</span>
+* new-item : <span style="color: turquoise">_creates a new file_</span>
+
+### <span style="color: gold;"> Liinux | MacOSX Commands :</span>
+
+* pwd : <span style="color: salmon"> _print working directory_</span>
+* hostname : <span style="color: salmon">_my computer's network name_</span>
+* mkdir : <span style="color: salmon">_make directory_</span>
+* cd : <span style="color: salmon">_change directory_</span>
+* ls : <span style="color: salmon">_list directory_</span>
+* rmdir : <span style="color: salmon">_remove directory_</span>
+* pushd : <span style="color: salmon"> _push directory_</span>
+* popd : <span style="color: salmon"> _pop directory_</span>
+* cp : <span style="color: salmon">_copy a file or directory_</span>
+* mv :  <span style="color: salmon">_move a file or directory_</span> 
+* less : <span style="color: turquoise">_page through a file_</span>
+* cat : <span style="color: turquoise">_print the whole file_</span>
+* xargs : <span style="color: turquoise">_execute arguments_</span>
+* find : <span style="color: turquoise">_find files_</span>
+* grep : <span style="color: turquoise">_find things inside files_</span>
+* man : <span style="color: turquoise">_read a manual page_</span>
+* apropos : <span style="color: turquoise">_find what man page is appropriate_</span>
+* env : <span style="color: turquoise">_look at your environment_</span>
+* echo : <span style="color: salmon">_print some arguments_</span>
+* export : <span style="color: turquoise">_export/set a new environment variable_</span>
+* exit : <span style="color: salmon">_exit the shell_</span>
+* sudo : <span style="color: turquoise">_DANGER! become super user root DANGER!_</span>
+* touch : <span style="color: turquoise">_creates a new file_</span>
+
+
 
 
 
