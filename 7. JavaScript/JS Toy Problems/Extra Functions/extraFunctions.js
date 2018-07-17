@@ -133,6 +133,60 @@ function getSleepHours(day) {
   
   calculateSleepDebt();
 
+// PRIME NUMBERS
+// Checking for prime numbers.
+
+  function isPrime(num) {
+    var divisor = 2;
+
+    while (num > divisor) {
+      if(num % divisor == 0) {
+        return false;
+      } else
+        divisor++;
+    } 
+      return true;
+  }
+
+  console.log(isPrime(137))
+  console.log(isPrime(237))
+
+// Prime Factors
+// Find all the prime factors of a number.
+
+function primeFactors(num) {
+  var factors = [],
+  divisor = 2;
+
+  while(num > 2) {
+    if(num % divisor == 0) {
+      factors.push(divisor);
+      num= num/ divisor;
+    } else {
+      divisor++;
+    }
+  }
+    return factors;
+}
+ console.log(primeFactors(69));
+ console.log(primeFactors(286));
+
+ //FIBONACCI
+ // How to get the nth fibonacci number
+ // Fibonacci series is one of the most popular interview questions. 
+
+ function fibonacci(n) {
+  var fibo = [0,1];
+
+  if (n <=2 ) return 1;
+
+  for(var i = 2; i <= n; i++){
+    fibo[i] = fibo[i-1] + fibo[i-2];
+  }
+    return fibo[n];
+ }
+
+ console.log(fibonacci(10));
 
 
-  
+

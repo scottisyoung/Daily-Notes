@@ -73,9 +73,29 @@
 ## <span style="color: blue;">Package.json File</span>
 
 *   Important file that Goes in the root of you package/application
+
 *   Tells NPM how your package is structured and what to do to install it.
 
-*   npm init: Creates and Sets it up for you by asking questions or create it manually.
+*   npm init : Creates and Sets up a package.json for you by asking questions or create it manually.
+
+*   What is in the parenthesis in the set up of npm init are default values, if you like them you can just hit enter. Or you can retype things to give them basic staring values.
+
+* Why do we have a package.json file?
+    * It helps us to remember the files/dependencies that are used within our code. Since we don't push up all of the node_modules, it helps us to only remember what is necessary. 
+
+
+## <span style="color: blue;">Yarn</span>
+
+*   Yarn is an alternative tool to NPM
+*   NPM is made by the people who maintain node and yarn is made by Facebook.
+*   The difference is that yarn is shorter better syntax in general and a lot quicker to install than npm. 
+*   NPM is pushing new versions that should make it as quick as yarn, however yarn has been around for a lot longer than npm. 
+*   Many developers use both for variable reasons.
+*   Another benefit to yarn is that it includes NPM & Bower which both have a variety of libraries. 
+*   To get yarn we do __sudo npm install -g yarn__
+*   We then type yarn install (equivalent to npm install)
+*   To get new packages in yarn we do __yarn add (name of file)__.  This is the same as npm install --save.  With yarn, there is no need to use --save.
+
 
 ## <span style="color: blue;">Installing Node</span>
 
@@ -87,6 +107,122 @@
 *   If you look in the file folder, you will see node.exe,   This is essentially a __Repl  (read, eval, print, loop)__  which is a command line that you can run javascript inside of. 
 
 *   The things we cant do is use the Document Object because we dont have the DOCUMENT.  (document.getElementById)      it will have no idea what we are talking about.  It is javascript without the browser.
+
+## <span style="color: blue;">Basic Node</span>
+
+*   Node is more than a server side language.  It can be used on the front and backend.
+*   Node is a javascript language that can be run outside of the browser.  Chrome used the V8 engine to run javascript.  They took that same engine and made it available outside the browser and in the terminal.  That is what node is. 
+*   Once node is installed you can instantly access it from the command line. 
+*   During devMountain, node was primarily used to..
+    *   Make our own web servers.
+    *   Development tools on the computer
+*   There are many many other situations that we can use node.  Like the following...
+    *   Home Automation (Tessel.io)
+    *   File editing and manipulation
+    *   Background Processes (Listeners, reoccuring tasks)
+    *   and MORE
+
+## <span style="color: blue;"> Nodemon </span>
+
+*   Everytime you run a script file in node, node script.js, you have to run node script.js in the terminal to update the changes.
+
+*   Nodemon is a unique tool that eliminates that process and updates for you when changes are made.  Everytime you save your file, nodemon will re-run and update your file. 
+
+*   To get Nodemon you do npm install -g nodemon
+
+*   To run nodemon we simply type __nodemon (name of js file we want to run)__
+
+*   To get out of nodemon, run ctrl + c.  This will get you out of any processes while in node such as nodemon, liveserver, babel, watchman, webpack and more. 
+
+## <span style="color: blue;"> Modules and Node </span>
+
+*   Modern code applications get very large, how do we split code across multiple files.
+
+*   This is done through a pattern called __Modules__.
+
+*   The syntax looks like this... 
+    *   In script.js file
+        * var calc = require("./calc");
+        * Once we require the file from the correct path, we can then use it.
+        * var three = calc.add(1,2);
+        * In this case we have an object with an invoked function add which will give a value.  In order to make this work we have to have a few things in the calc.js file first.
+
+    *   In calc.js file 
+        *   var calc = { </br>
+            &emsp; add: function (num1, num2) { <br/>
+            &emsp; return num1 + num2;
+        </br> &nbsp; } </br>
+        }; </br>
+        module.exports = calc;
+
+        *   In the calc.js file we use an object with a function inside.
+
+        *   The _MOST_ important line is the module.exports.  We are telling node that if anyone requires this file, we will be giving them the value of calc, and calc is an object with the function add.  
+
+        *   Whatever value we want we can export.  Strings, Arrays, Functions.  Most commonly we export objects. On the objects we can add multiple properties.  A value with 4 or 5 different functions.  It is a bundled up set of functionality or a __MODULE__.
+
+        *   Module:  Set of bundled functionality on an object that is exported. 
+
+        *   An example of exporting a module is building properties on the export object.
+
+             *  In "greetings.js"
+                *   module.exports.basic = "Hello, There!';
+                *   module.exports.custom = function(name) { 
+                    return "Well, hi " + name + '!'; </br>
+                }
+            *   In "script.js"
+                *   var greetings = require('./greetings');
+
+                * greetings.custom("Scott"); 
+                * greetings.basic
+
+*   It is also common to export a function
+    *   An example of exporting a function is the constructor function below:
+
+        *   In the file "makeUser.js"
+            *   var User = function(name, age) { </br>
+                this.name = name; </br>
+                this.age = age; </br>
+            } </br>
+
+            module.exports = User;
+
+        *   In the file "script.js"
+            *   var Userr = require('./makeUser');
+            *   var sheila = new User('Sheila', 26);
+
+        *   So in this case Sheila will be created which is an object like below:
+            *   { </br>
+            name: "Sheila", </br>
+            age: 26 </br>
+            }
+        
+    *   Here is another example but in this example the function will return an object.
+
+        *   In the file "makeList.js"
+            *   var makeList = function() { </br>
+                var list = [ ];
+
+                return { </br>
+                    addItem: function( item ) { </br>
+                        list.push(item); </br>
+                    &emsp;} </br>
+                &nbsp;&nbsp;} </br>
+                }
+        *   In the file "script.js"
+            *   var makeList = require('./makeList.js);
+            *   var todoList = makeList();
+            *   todoList
+        *   So in this case todoList is an object like below:
+            * { </br>
+            addItem: [fuction] </br>
+            }
+
+*   Important to note,  Import / export syntax does not work in Node!!!
+
+## <span style="color: blue;"> Static Files </span>
+
+
 
 ## <span style="color: blue;"> Windows Command Line</span>
 
