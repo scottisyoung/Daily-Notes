@@ -222,6 +222,79 @@
 
 ## <span style="color: blue;"> Static Files </span>
 
+*   Express can be used as a webserver with endpoints to send information and data back and forth but it can also be used to send html and pictures files. 
+
+*   This is what we refer to as static files
+
+* Here is an example and it comes baked into express.
+
+    *   var app = express();
+    *   __app.use( express.static( ));__  Which is Top Level Middleware
+    *   This is telling our express server that we are going to have static files that we want people to ask for.
+    *   Then we give it a folder path that we want to serve up.
+    *   app.use(express.static('public'));
+    *   IMPORTANT:   Dont not serve up your entire project folder.  You dont want end users seeing your server code. That is a HUGE security mistake.
+    *   We make the public folder with HTML files, CSS, Pictures and things we want the users to get.
+    *   To clean the code up from above,
+        *   var path = require('path');
+        *   var app = express();
+        *   app.use( express.static( </br>
+            path.join(__dirname, 'public') </br>
+            ));
+    *   Now when a client comes and asks for website.com, it will serve up the default file which is index.html and as long as that file lives in the public folder, it will give it back to the client.
+
+        * app.use(express.static('public'));
+        * app.get('/about', function(req, res, next) { </br>
+            res.send(info); </br>
+        })
+        *  when the client asks for the about section, it will look for the about folder and serve it up. 
+        *   It is also going to res.send(info) and overwrite whatever was on that about.html page. 
+        *  So it is really important that if you want to do an endpoint, sending information, you separate with a /api/.  
+            *   app.get('/api/about', function(req,res,next) { </br>
+              res.send(info); </br>
+              })
+        *   That way you can serve up the about folder with its index page and they can go to /api/about to get information.
+
+## <span style="color: blue;"> Endpoints </span>
+
+*   Endpoints are points in our code that we have definded to listen for user requests.
+
+*   If a lot of computers were just allowed to mess with our server it would create a huge mess.  So we create a layer, which is often called the __api__ part of our server. 
+
+*   The api's job is to receive the requests, put them in a little box and then send them back out as a response.
+
+*   Bad Requests of the api and they dont get into our code and nothing happens
+
+*   If we were to have a server at soda.org
+
+*   __GET:__  is a request to receive data at brands || http://soda.org/api/brands
+*   __POST:__  We can add data at brands || http://soda.org/api/brands
+*   __PUT:__  Is a request to change data or replace data. || http://soda.org/api/brands/<span style = "color: gray;">brand</span> 
+    * We would edit the data at the brand section with like changing coke to pepsi or something. 
+*   __DELETE:__ We can also delete parts || http://soda.org/api/brands/<span style = "color: gray;">brand</span>
+    *   In the brand area we could delete coke entirely. 
+
+*   The rest verb is met with an express method
+    * .get(), .post(), .put(), .delete()
+
+    * http://baseball.net
+    * app.get('/api/players')
+        * The user will have to type http://baseball.net/api/players to get to thi endpoint.
+    *   Since we don't know when a user will go to this endpoint we use a callback function. Inside we use the function to get the code and send it back to the user. 
+
+        * app.get('/api/players', function(req, res, next){ </br>
+        ** code to send back all players** </br>
+        })
+        *   The callback function takes in some parameters. 
+            * Req : Represents request information that user sent us when they started the request.
+            * Res : Short for response.  Represents information that we want to send back to the user.
+            * Next : Goes to the next function in the chain, has to do with middleware. 
+        
+        *  app.post is the same format as app.get the only difference is that  **code will b to add a player **
+
+## <span style="color: blue;"> Smple Server </span>
+
+
 
 
 ## <span style="color: blue;"> Windows Command Line</span>
